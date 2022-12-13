@@ -21,7 +21,7 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 
-def imgaleatoria(folder):
+def randomimage(folder):
     images = glob.glob(folder + "*")
     image_open = images[random.randint(0,len(images))-1]
     image_size = os.path.getsize(image_open)
@@ -32,4 +32,4 @@ def imgaleatoria(folder):
     #shutil.copy(image_open, "Copias/")
     #os.remove(image_open)
 
-imgaleatoria("Images/")
+randomimage("Images/")
